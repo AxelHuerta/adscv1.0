@@ -7,7 +7,78 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background: #f6faff;
+}
+
+.navbar {
+  display: grid;
+  background: #111;
+  align-content: center;
+  padding: 1em 0;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6em;
+  padding: 1em;
+  text-align: center;
+  list-style: none;
+  color: #f6faff;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.active {
+  background: #557DE5;
+}
+
+.principal {
+  background: #f6faff;
+  height: 95hv;
+  width: 100%;
+  margin: 3em;
+  border-radius: 2em;
+  text-transform: capitalize;
+}
+
+.patient-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2em;
+  list-style: none;
+  text-align: center;
+}
+
+.table-title-patient, .patients-info-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.table-title-patient {
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.patients-info-list {
+  padding: .4em;
+}
+
+.list-impar {
+  background: #EBF2FF;
 }
