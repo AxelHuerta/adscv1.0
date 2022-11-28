@@ -1,5 +1,5 @@
 // permite el uso de links dinamicos
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 // fuente de iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,16 +17,20 @@ const Layout = () => {
     <>
       {/* navbar, menu principal */}
       <nav className="navbar">
-        <Link className="nav-icon">
+        {/* logo */}
+        <div className="nav-icon logo">
           <FontAwesomeIcon
             icon={faTooth}
-            style={{ fontSize: "2em", color: "white" }}
+            style={{ fontSize: "1em", margin: ".5em" }}
           />
           <p>Logo</p>
-        </Link>
+        </div>
         <NavLink to={"/"} className="nav-icon" activeClassName="active">
-          <FontAwesomeIcon icon={faHouse} style={{ fontSize: "2em" }} />
-          <p>Principal</p>
+          <FontAwesomeIcon
+            icon={faHouse}
+            style={{ fontSize: "1em", margin: ".5em" }}
+          />
+          <p>página principal</p>
         </NavLink>
         {/* Link a la seccion pacientes */}
         <NavLink
@@ -34,18 +38,31 @@ const Layout = () => {
           className="nav-icon"
           activeClassName="active"
         >
-          <FontAwesomeIcon icon={faUsers} style={{ fontSize: "2em" }} />
-          <p>Pacientes</p>
+          <FontAwesomeIcon
+            icon={faUsers}
+            style={{ fontSize: "1em", margin: ".5em" }}
+          />
+          <p>listado de pacientes</p>
         </NavLink>
         {/* link a la seccion citas */}
         <NavLink to={"/Citas"} className="nav-icon" activeClassName="active">
-          <FontAwesomeIcon icon={faCalendar} style={{ fontSize: "2em" }} />
-          <p>Citas</p>
+          <FontAwesomeIcon
+            icon={faCalendar}
+            style={{ fontSize: "1em", margin: ".5em" }}
+          />
+          <p>Citas próximas</p>
         </NavLink>
         {/* link a la seccion solicitudes */}
-        <NavLink to={"/Solicitudes"} className="nav-icon" activeClassName="active">
-          <FontAwesomeIcon icon={faBell} style={{ fontSize: "2em" }} />
-          <p>Solicitudes</p>
+        <NavLink
+          to={"/Solicitudes"}
+          className="nav-icon"
+          activeClassName="active"
+        >
+          <FontAwesomeIcon
+            icon={faBell}
+            style={{ fontSize: "1em", margin: ".5em" }}
+          />
+          <p>Solicitudes de citas</p>
         </NavLink>
       </nav>
       <Outlet />

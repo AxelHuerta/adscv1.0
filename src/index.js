@@ -12,6 +12,7 @@ import Principal from "./sections/Principal";
 import Pacientes from "./sections/Pacientes";
 import Citas from "./sections/Citas";
 import Solicitudes from "./sections/Solicitudes";
+import FichaPaciente from "./sections/FichaPaciente";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -25,6 +26,7 @@ root.render(
             <Route path="/Pacientes" element={<Pacientes />} />
             <Route path="/Citas" element={<Citas />} />
             <Route path="/Solicitudes" element={<Solicitudes />} />
+            <Route path="/FichaPaciente" element={<FichaPaciente />} />
           </Route>
         </Routes>
       </BrowserRouter>
