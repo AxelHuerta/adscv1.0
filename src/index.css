@@ -28,19 +28,69 @@ code {
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  width: 86vw;
   background: var(--bg-general);
+  float: right;
 }
 
 
 /* menu lateral */
-
 .navbar {
   background: var(--text-white);
   display: grid;
   align-content: center;
   padding: 1em 0;
-  min-width: 15em;
+  width: 14vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+}
+
+@media only screen and (max-width: 1619px) {
+  .navbar {
+    width: 15vw;
+  }
+
+  .container {
+    width: 85vw;
+  }
+}
+@media only screen and (max-width: 1511px) {
+  .navbar {
+    width: 16vw;
+  }
+
+  .container {
+    width: 84vw;
+  }
+}
+@media only screen and (max-width: 1511px) {
+  .navbar {
+    width: 17vw;
+  }
+
+  .container {
+    width: 83vw;
+  }
+}
+@media only screen and (max-width: 1333px) {
+  .navbar {
+    width: 18vw;
+  }
+
+  .container {
+    width: 82vw;
+  }
+}
+@media only screen and (max-width: 1259px) {
+  .navbar {
+    width: 19vw;
+  }
+
+  .container {
+    width: 81vw;
+  }
 }
 
 .nav-icon {
@@ -64,14 +114,14 @@ code {
   margin: 3em;
   width: 100%;
   border-radius: 2em;
-  text-transform: capitalize;
 }
 
-.principal-area {
+.block {
   background: var(--text-white);
-  padding: 1em;
-  margin: 2em 1em;
+  padding: 3em 1em;
+  margin: 2em 1em 0;
   border-radius: 1em;
+  text-transform: capitalize;
 }
 
 .header {
@@ -80,8 +130,29 @@ code {
   align-items: center;
 }
 
-/* seccion pacientes */
-.patient-list {
+.header-profile {
+  display: flex;
+  align-items: center;
+}
+
+/* elementos */
+.grid-2-1-2, .grid-3, .grid-7 {
+  display: grid;
+}
+
+.grid-2-1-2 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.list {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -90,24 +161,13 @@ code {
   text-align: center;
 }
 
-.table-title-patient, .patients-info-list {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.table-title-patient {
+.header-list {
   font-weight: 700;
-  margin-bottom: 1em;
 }
 
-.patients-info-list {
-  padding: .4em;
+.header-list li {
+  margin: 0 1em;
 }
-
-.list-impar {
-  background: #EBF2FF;
-}
-/* elementos */
 
 .right {
   display: grid;
@@ -125,3 +185,11 @@ code {
   align-items: center;
 }
 
+.hline {
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin: 1em;
+}
+
+.margin-b {
+  margin-bottom: 1em;
+}

@@ -12,7 +12,7 @@ const PatientRow = ({
   gender = null,
 }) => {
   return (
-    <div className="patients-info-list list-impar">
+    <div className="grid-7">
       <li>{id}</li>
       <li>{name}</li>
       <li>{apat}</li>

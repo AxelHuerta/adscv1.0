@@ -42,7 +42,7 @@ const Layout = () => {
             icon={faUsers}
             style={{ fontSize: "1em", margin: ".5em" }}
           />
-          <p>listado de pacientes</p>
+          <p>Listado de pacientes</p>
         </NavLink>
         {/* link a la seccion citas */}
         <NavLink to={"/Citas"} className="nav-icon" activeClassName="active">
